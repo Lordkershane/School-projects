@@ -9,9 +9,6 @@
 #DATE: OCTOBER 18TH 2015
 #PURPOSE: OUTPUT USER WESTERN AND CHINESE ZODIAC SIGN AND DAY OF THE WEEK THEY WERE BORN
 # SITES USED: http://codereview.stackexchange.com/questions/31652/simple-zodiac-sign-program
-
-
- 
 #################################################################################
 # PRINT USAGE IF NO PARAMETERS ARE ENTERED
 
@@ -28,8 +25,6 @@ exit 9
 fi
 ######################################################################################
 #		ASSIGN VALUES TO VARIBLES FROM ENTERED PARAMETERS AT THE TERMINAL
-
-	
 
 if [ $# -eq "1" ]
 	then
@@ -49,25 +44,17 @@ if [ $# -eq "6" ]
   esac
  done
 fi
-
-
-
 ######################################################################################
 #		WESTERN ZODIAC CODE 
-
 if [ "$month" -eq "12" ] && [ "$day" -ge "22" ]
 	then
 	 printf "Your sign is Capricorn" | figlet                               
                           
-
 elif [ "$month" -eq "12" ] && [ "$day" -le "21" ]
 	 then
 	printf "Your sign is Sagittarius" | figlet
-
-#######################################################################################
+########################################################
 		# SAGITTARIUS OR CAPRICORN
-
-
 elif [ "$month" -eq "11" ] && [ "$day" -ge "23" ]
 	then
 	 printf "Your sign is Sagittarius" | figlet
@@ -75,11 +62,8 @@ elif [ "$month" -eq "11" ] && [ "$day" -ge "23" ]
 elif [ "$month" -eq "11" ] && [ "$day" -le "22" ]
 	then
 	 printf "Your sign is Scorpio" | figlet
-
 #######################################################
 		#  SCORPIO OR LIBRA
-
-
 elif [ "$month" -eq "10" ] && [ "$day" -ge "23" ]
 	then
 	 printf "your sign is Scorpio" | figlet
@@ -87,11 +71,8 @@ elif [ "$month" -eq "10" ] && [ "$day" -ge "23" ]
 elif [ "$month" -eq "10" ] && [ "$day" -le "22" ]
 	then 
 	 printf "Your sign is Libra" | figlet
-
 #######################################################
 		# LIBRA OR VIRGO
-
-
 elif [ "$month" -eq "09" ] && [ "$day" -ge "22" ]
         then
          printf "your sign is Libra" | figlet
@@ -99,10 +80,8 @@ elif [ "$month" -eq "09" ] && [ "$day" -ge "22" ]
 elif [ "$month" -eq "09" ] && [ "$day" -le "22" ]
         then
          printf "Your sign is Virgo" | figlet
-
 #######################################################
 		# VIRGO OR LEO
-
 elif [ "$month" -eq "08" ] && [ "$day" -ge "23" ]
         then
          printf "your sign is Virgo" | figlet
@@ -110,10 +89,8 @@ elif [ "$month" -eq "08" ] && [ "$day" -ge "23" ]
 elif [ "$month" -eq "08" ] && [ "$day" -le "22" ]
         then
          printf "Your sign is Leo" | figlet
-
 #######################################################
 		# VIRGO OR CANCER
-
 elif [ "$month" -eq "07" ] && [ "$day" -ge "23" ]
         then
          printf "your sign is Leo" | figlet
@@ -121,10 +98,8 @@ elif [ "$month" -eq "07" ] && [ "$day" -ge "23" ]
 elif [ "$month" -eq "07" ] && [ "$day" -le "22" ]
         then
          printf "Your sign is Cancer" | figlet
-
 #########################################################
 		# CANCER OR GEMINI
-
 elif [ "$month" -eq "06" ] && [ "$day" -ge "22" ]
         then
          printf "your sign is Cancer" | figlet
@@ -135,8 +110,6 @@ elif [ "$month" -eq "06" ] && [ "$day" -le "21" ]
 
 ##########################################################
 		# GEMINI OR  Taurus
-
-
 elif [ "$month" -eq "05" ] && [ "$day" -ge "22" ]
         then
          printf "your sign is Gemini" | figlet
@@ -144,11 +117,8 @@ elif [ "$month" -eq "05" ] && [ "$day" -ge "22" ]
 elif [ "$month" -eq "05" ] && [ "$day" -le "21" ]
         then
          printf "Your sign is Taurus" | figlet
-
 ##########################################################
 		# TAURUS OR ARIES
-
-
 elif [ "$month" -eq "04" ] && [ "$day" -ge "21" ]
         then
          printf "your sign is Taurus" | figlet
@@ -156,12 +126,8 @@ elif [ "$month" -eq "04" ] && [ "$day" -ge "21" ]
 elif [ "$month" -eq "04" ] && [ "$day" -le "20" ]
         then
          printf "Your sign is Aries" | figlet
-
-
 ###########################################################
 		# ARIES OR PICES
-
-
 elif [ "$month" -eq "03" ] && [ "$day" -ge "21" ]
         then
          printf "your sign is Aries" | figlet
@@ -172,7 +138,6 @@ elif [ "$month" -eq "03" ] && [ "$day" -le "20" ]
 
 ###########################################################
 		# PICES OR AQUARIUS
-
 elif [ "$month" -eq "02" ] && [ "$day" -ge "20" ]
         then
          printf "your sign is Pices" | figlet
@@ -182,8 +147,6 @@ elif [ "$month" -eq "02" ] && [ "$day" -le "19" ]
          printf "Your sign is Aquarius" | figlet
 ###########################################################
 		# AQUARIUS OR CAPRICORN
-
-
 elif [ "$month" -eq "01" ] && [ "$day" -ge "21" ]
         then
          printf "your sign is Aqarius" | figlet
@@ -194,17 +157,8 @@ elif [ "$month" -eq "01" ] && [ "$day" -le "20" ]
 fi
 # 		 END OF WESTERN ZODIAC SIGNS 
 #############################################################
-
-
-
-
-
-
 #		CHINESE ZODIAC SIGNS
 ##############################################################
-
-
-
 calculation=$((($year/12)*12))
 chinese_zodiac_sign=$(($year-calculation))
 
@@ -256,11 +210,8 @@ elif [ $chinese_zodiac_sign -eq "11" ]
 	then
 	 symbol="Goat"
 fi
-
 #		END OF CHINESE ZODIAC CODE
 #################################################################
-
-
 
 #		CHINESE ELEMENTS
 ################################################################
@@ -301,12 +252,6 @@ fi
 
 # 		ECHOING DAY OF THE MONTH THE USE US BORN ON
 ####################################################################
-
-
-
-
-
-
 echo -n "You were born on a " 
 	date -d "$year-$month-$day" +%A
 
