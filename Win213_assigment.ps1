@@ -1,5 +1,5 @@
 ﻿<#Date:November 7,2015
-﻿#This scrip is used to locate empty folders and delete them, find the three largest processes on running on the system,
+﻿#This scrip is used to locate empty folders and delete them, find the three largest processes running on the system,
 ﻿#find and save all installed software on the system to a file and create a CSV file.
 #Authors: Michael Thomas,Angie Dacosta,Zeechan (Group A)
 #>
@@ -115,7 +115,7 @@ function System-Inventory ($logPath ="C:\backup\log\sys.log")
  Clear-Host
  Write-Host "Loading completed"
  pause 
-########Writing date and computer name to the top of the lof file###################################################################################################
+########Writing date and computer name to the top of the log file###################################################################################################
 Write-Output "$Date" | Out-file -FilePath $logPath -encoding ASCII
 Write-Output "====================================================================================================" | Out-file -FilePath "$logPath"  -encoding ASCII -append
 Write-Output "Computer: $FullComputerName" | Out-file -FilePath $logPath -encoding ASCII
